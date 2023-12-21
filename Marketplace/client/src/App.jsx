@@ -1,39 +1,27 @@
-import React, { useEffect, useState } from "react";
-import Navbar from "./page_comp/navbar";
-import Official from "./Signup&Login/official";
-import axios from "axios"
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter, Routes, Route  } from "react-router-dom";
+import Home from "./pages/home/Home.jsx"
+import Categories from "./pages/categories/Categories.jsx";
+import Products from "./pages/products/Products.jsx";
+import Create from "./pages/Create/Create.jsx";
+import Onepage from "./pages/Onepage/Onepage.jsx";
+
+
+
 
 function App() {
-  const[users,setUsers]=useState([])
-  axios.defaults.withCredentials=true
-
-useEffect(()=>{
- getall()
-},[])
-const getall=async()=>{
-  try{
-  const result=await axios.get("http://localhost:3000/api/market/alluser")
-  setUsers(result.data)
-  }catch(err){
-    console.error(err);
-  }
-}
-
-
-
-
+const [idCategorie,setCategorie]=useState(0)
   return (
-    <div>
-       <Navbar/>
+    <div className="App">
       <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Official/>}></Route>
-
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home/>}></Route>
+          <Route path="/categories" element={<Categories setCategorie={setCategorie} />} ></Route>
+          <Route path="/products" element={<Products idCategorie={idCategorie} />}></Route> 
+          <Route path="/create" element={<Create />}></Route>
+          <Route path="/one" element={<Onepage/>}> </Route>
+        </Routes>
       </BrowserRouter>
-      <Navbar/>
     </div>
   );
 }
