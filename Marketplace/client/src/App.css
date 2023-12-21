@@ -1,125 +1,38 @@
-/*NAVBAR*/
-nav{
-  background-color: black;
-  height: 3em;
-  padding: 3px;
-}
-.nav_mess{
-  color: white;
-  margin-left: 30%;
-  letter-spacing: 1.5px;
-  font-family:Trebuchet MS;
-}
-.link_nav{
-  color: white;
-  font-weight:bolder;
-  font-family:Trebuchet MS;
-}
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; 
-  height: 100px;
-
+.App {
+  text-align: center;
 }
 
-.title_nav{
-  margin-left: 5em;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
-.div1_nav{
-  margin-left: 1em;
-}
-.ul_nav{
-  display: flex;
-  list-style: none;
-  li{
-    font-size: 25px;
-    margin-right: 2em;
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
   }
 }
-.stack_nav{
-  margin-right: 2em;
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
-}
-.search_nav{
-  background-color: rgba(128, 128, 128, 0.116);
-}
-.search_icon{
-  position:absolute;
-  right: 15.5em;
-  top: 5.7em;
-  background-color: rgba(128, 128, 128, 0);
-  border: none;
-  cursor: pointer;
-}
-.div2_nav{
-  padding-right: 4em;
-  display: flex;
-}
-.icons_nav{
-  padding-top: 0.7em;
-}
-.nav_icons{
-  margin-right: 0.5em;
-  cursor: pointer;
-  background-color: white;
-  border: none;
-}
-/****************************************/
-/*SIGNUP & LOGIN*/
-.div1_off{
-  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
-.article1_off{
-  margin-top: 6em;
+
+.App-link {
+  color: #61dafb;
 }
-.img_off{
-  width: 950px;
-  height: 900px;
-}
-.article2_off{
-  position:absolute;
-  left: 64%;
-  top: 32%;
-}
-.title_signup{
-  font-size: 3em;
-  font-family:Century Gothic;
-  letter-spacing: 3px;
-}
-.p_signup{
-  font-size: 20px;
-  margin-top: -20px;
-  margin-left: 10px;
-  font-weight: 400;
-}
-.input_sign{
-  padding-top: 1em;
-  padding-bottom: 2em;
-}
-.creat_sign{
-color: black;
-margin-left: 2em;
-margin-bottom: 2em;
-border: 1px solid;
-}
-.parag_sign{
-  color: gray;
-  font-size: 20px;
-  margin-left: 4em;
-  font-family:Franklin Gothic Medium;
-  letter-spacing: 1px;
-}
-.link_sign{
-  color: gray;
-  font-size: 20px;
-  font-family:Franklin Gothic Medium;
-  letter-spacing: 1px;
-  text-decoration: underline;
-  cursor: pointer;
-}
-.radio_sign{
-  margin-bottom: 2em;
-  margin-left: 10px;
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
